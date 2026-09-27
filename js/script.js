@@ -2,11 +2,12 @@
    EL JARDÍN DE TORIBIA — script.js
    ==========================================================================
    Carrusel:
-   - El cambio de imágenes ocurre al pasar el cursor sobre la imagen.
-   - Espera 2 segundos antes de cambiar.
-   - Hace una transición horizontal suave entre fotografías.
-   - Al retirar el cursor, se queda en la imagen actual.
-   - Al volver a colocar el cursor, continúa desde esa imagen.
+   - En dispositivos con cursor (laptop/desktop): el cambio de imágenes
+     ocurre al pasar el cursor sobre la imagen, cada 2 segundos, y se
+     detiene al retirar el cursor (se queda en la imagen actual).
+   - En dispositivos táctiles (celular/tablet), donde no existe un cursor
+     real: el carrusel avanza automáticamente cada 2 segundos, sin
+     necesidad de tocar ni deslizar nada.
    ========================================================================== */
 
 
@@ -323,22 +324,28 @@ function crearCarruselImagenes(
 
 
 /* ==========================================================================
-   5. CARRUSEL ACTIVADO POR CURSOR
+   5. CARRUSEL: HOVER EN ESCRITORIO, AUTOPLAY EN TÁCTIL
    ========================================================================== */
 
 /**
- * El carrusel comienza únicamente cuando
- * el usuario coloca el cursor sobre la imagen.
+ * En dispositivos con cursor real (laptop/desktop):
+ * - El carrusel comienza únicamente cuando el usuario coloca
+ *   el cursor sobre la imagen.
+ * - Cada cambio ocurre cada 2 segundos.
+ * - Al retirar el cursor, se detiene y se mantiene la imagen actual.
+ * - Al volver a colocar el cursor, continúa desde esa imagen.
  *
- * Cada cambio ocurre cada 2 segundos.
+ * En dispositivos táctiles (celular/tablet), donde "hover" no existe
+ * de forma confiable:
+ * - El carrusel avanza solo, automáticamente, cada 2 segundos,
+ *   sin necesidad de tocar ni deslizar nada.
  *
- * Al retirar el cursor:
- * - se detiene el carrusel
- * - se mantiene la imagen actual
- *
- * Al volver a colocar el cursor:
- * - vuelve a comenzar el contador
- * - continúa desde la imagen actual
+ * --- CORRECCIÓN ---
+ * Antes, el carrusel dependía solo de "mouseenter"/"mouseleave", que en
+ * pantallas táctiles casi nunca se disparan de forma confiable. Por eso
+ * en celular las imágenes se quedaban congeladas. Ahora detectamos el
+ * tipo de dispositivo con matchMedia('(hover: hover)') y, si no hay
+ * cursor real, arrancamos el carrusel de una vez en modo automático.
  */
 
 function configurarCarruselHover(
@@ -500,9 +507,36 @@ function configurarCarruselHover(
 
 
   /*
-   * Cuando el cursor entra:
-   *
-   * comienza el contador de 2 segundos.
+   * --- CORRECCIÓN ---
+   * ¿Este dispositivo tiene un cursor real (mouse/trackpad)?
+   * En celulares y tablets esto da "false", porque el dedo
+   * no puede "pasar por encima" como lo hace un cursor.
+   */
+
+  const tieneCursorReal =
+    window.matchMedia(
+      "(hover: hover)"
+    ).matches;
+
+
+  if (!tieneCursorReal) {
+
+    /*
+     * Dispositivo táctil: arrancamos el carrusel
+     * de una vez, en modo automático, sin esperar
+     * ningún gesto del usuario.
+     */
+
+    iniciar();
+
+    return;
+
+  }
+
+
+  /*
+   * Dispositivo con cursor (laptop/desktop):
+   * comportamiento original basado en hover.
    */
 
   carrusel.addEventListener(
@@ -510,18 +544,6 @@ function configurarCarruselHover(
     iniciar
   );
 
-
-  /*
-   * Cuando el cursor sale:
-   *
-   * detenemos el carrusel.
-   *
-   * IMPORTANTE:
-   * NO cambiamos indiceActual.
-   *
-   * Por eso la imagen actual permanece
-   * visible al retirar el cursor.
-   */
 
   carrusel.addEventListener(
     "mouseleave",
@@ -639,8 +661,7 @@ function crearTarjetaProducto(
 
 
   /*
-   * Activamos el carrusel
-   * únicamente mediante hover.
+   * Activamos el carrusel.
    */
 
   configurarCarruselHover(

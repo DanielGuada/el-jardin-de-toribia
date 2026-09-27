@@ -396,7 +396,7 @@ button:focus-visible {
   gap: 32px;
 }
 
-/* Última fila: centrar las dos tarjetas */
+/* Última fila: centrar las dos tarjetas (solo aplica con 3 columnas, escritorio) */
 .producto-card:nth-child(7) {
   grid-column: 1 / 2;
   justify-self: end;
@@ -910,12 +910,14 @@ button:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .producto-card:nth-last-child(2),
-  .producto-card:last-child {
+  /* En 2 columnas, las tarjetas 7 y 8 ya no deben forzarse a media columna:
+     se resetean para que ocupen su celda normal del grid. */
+  .producto-card:nth-child(7),
+  .producto-card:nth-child(8) {
     grid-column: auto;
-    margin-left: 0;
+    justify-self: stretch;
+    width: 100%;
   }
-
 
 }
 
@@ -984,9 +986,12 @@ button:focus-visible {
     text-align: center;
   }
 
+  /* --- CORRECCIÓN: el hero ya no se estira a 82vh, solo ocupa lo que
+     necesita su contenido. Esto elimina el hueco vacío antes del catálogo. */
   .hero {
-    min-height: 82vh;
-    align-items: stretch;
+    min-height: auto;
+    padding: 32px 0;
+    align-items: flex-end;
   }
 
   .hero-content {
@@ -1012,6 +1017,19 @@ button:focus-visible {
 
     width: 52px;
     height: 52px;
+  }
+
+  /* --- CORRECCIÓN: en celular el catálogo pasa a una sola columna,
+     para que el precio, la descripción y el botón no queden apretados. */
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .producto-card:nth-child(7),
+  .producto-card:nth-child(8) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: 100%;
   }
 
 }
