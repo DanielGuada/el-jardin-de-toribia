@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El Jardín de Toribia | Flores y arreglos florales</title>
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+  <meta name="description" content="Flores y arreglos preparados con cariño. Conoce el catálogo de El Jardín de Toribia y realiza tu pedido por WhatsApp.">
+
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="El Jardín de Toribia | Flores y arreglos florales">
+  <meta property="og:description" content="Flores y arreglos preparados con cariño. Conoce el catálogo y realiza tu pedido por WhatsApp.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+
+      <a href="#inicio" class="logo">El Jardín de Toribia</a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <a href="#" class="btn btn-whatsapp nav-whatsapp" id="nav-whatsapp-btn">
+          Pedir por WhatsApp
+        </a>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ======================= HERO ======================= -->
+    <section id="inicio" class="hero">
+
+      <div class="hero-media">
+
+        <!--
+          Imagen temporal de Unsplash.
+          Para usar tu propia foto:
+          guarda la imagen en img/ y cambia el src.
+        -->
+
+        <img
+          src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1600&auto=format&fit=crop"
+          alt="Ramo de flores frescas en tonos suaves sobre un fondo natural"
+          class="hero-img"
+        >
+
+        <div class="hero-overlay"></div>
+
+      </div>
+
+
+      <div class="hero-content">
+
+        <p class="hero-eyebrow">
+          Flores &amp; arreglos florales
+        </p>
+
+        <h1 class="hero-title">
+          El Jardín de Toribia
+        </h1>
+
+        <p class="hero-subtitle">
+          El jardin que nacio de un amor verdadero.
+        </p>
+
+        <p class="hero-text">
+          Arreglos florales preparados con cariño para regalar, celebrar
+          o simplemente alegrar el día.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#catalogo" class="btn btn-primary">
+            Ver catálogo
+          </a>
+
+          <a href="#" class="btn btn-whatsapp" id="hero-whatsapp-btn">
+            Pedir por WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================= CATÁLOGO ======================= -->
+    <section id="catalogo" class="section catalogo">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <h2>
+            Nuestro catálogo
+          </h2>
+
+          <p>
+            Encuentra el arreglo perfecto para cada ocasión.
+          </p>
+
+        </div>
+
+        <!--
+          Las tarjetas de producto se generan automáticamente
+          desde js/script.js
+        -->
+
+        <div
+          class="catalogo-grid"
+          id="catalogo-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================= TÉRMINOS Y CONDICIONES ======================= -->
+<section id="nosotros" class="section nosotros">
+
+  <div class="section-inner nosotros-inner">
+
+    <div class="nosotros-imagen">
+      <img
+        src="img/jardin.jpeg"
+        alt="El Jardín de Toribia"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="nosotros-texto">
+
+      <p class="section-tag">
+        Antes de realizar tu pedido
+      </p>
+
+      <h2>
+        TÉRMINOS Y CONDICIONES
+      </h2>
+
+      <p>
+        <strong>•</strong> Todo ramo cuenta con dedicatoria.
+      </p>
+
+      <p>
+        <strong>•</strong> Se requiere un 50% de anticipo para agendar el pedido.
+      </p>
+
+      <p>
+        <strong>•</strong> Los pedidos especiales deben agendarse con mínimo un día de anticipación.
+      </p>
+
+      <p>
+        <strong>•</strong> Toda nuestra flor es fresca. Por este motivo, no se realizan devoluciones.
+      </p>
+
+      <p>
+        <strong>•</strong> Los colores del papel pueden variar dependiendo de la disponibilidad existente.
+      </p>
+
+      <p>
+        <strong>•</strong> Los modelos pueden presentar variaciones respecto a las fotografías del catálogo, ya que trabajamos con flores naturales y cada una es diferente.
+      </p>
+
+      <p>
+        <strong>•</strong> Los envíos tienen un costo adicional, con el objetivo de que el transporte mantenga el ramo en perfectas condiciones.
+      </p>
+
+      <p>
+        <strong>•</strong> Se agenda una hora estimada de entrega; puede existir una variación dependiendo del tráfico y las condiciones del traslado.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- ======================= CÓMO PEDIR ======================= -->
+    <section id="como-pedir" class="section como-pedir">
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <h2>
+            Cómo pedir
+          </h2>
+
+          <p>
+            Hacer tu pedido es muy sencillo.
+          </p>
+
+        </div>
+
+
+        <ol class="pasos-lista">
+
+          <li class="paso">
+
+            <span class="paso-numero">
+              01
+            </span>
+
+            <h3>
+              Elige tus flores
+            </h3>
+
+            <p>
+              Explora nuestro catálogo y encuentra el arreglo que más te guste.
+            </p>
+
+          </li>
+
+
+          <li class="paso">
+
+            <span class="paso-numero">
+              02
+            </span>
+
+            <h3>
+              Escríbenos
+            </h3>
+
+            <p>
+              Contáctanos por WhatsApp y cuéntanos qué estás buscando.
+            </p>
+
+          </li>
+
+
+          <li class="paso">
+
+            <span class="paso-numero">
+              03
+            </span>
+
+            <h3>
+              Personalizamos tu pedido
+            </h3>
+
+            <p>
+              Confirmamos disponibilidad, detalles y entrega contigo.
+            </p>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================= CONTACTO ======================= -->
+    <section id="contacto" class="section contacto">
+
+      <div class="section-inner contacto-inner">
+
+        <div class="contacto-texto">
+
+          <h2>
+            ¿Tienes una idea en mente?
+          </h2>
+
+          <p>
+            Escríbenos y con gusto te ayudamos a encontrar las flores perfectas.
+          </p>
+
+          <ul
+            class="contacto-datos"
+            id="contacto-datos"
+          >
+            <!--
+              Estos datos se completan automáticamente
+              desde js/script.js (objeto CONFIG)
+            -->
+          </ul>
+
+        </div>
+
+
+        <div class="contacto-card">
+
+          <h3>
+            WhatsApp
+          </h3>
+
+          <p>
+            Haz tu pedido o consulta disponibilidad.
+          </p>
+
+          <a
+            href="#"
+            class="btn btn-whatsapp"
+            id="contacto-whatsapp-btn"
+          >
+            Escribir por WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+
+    <div class="section-inner footer-inner">
+
+      <div class="footer-brand">
+
+        <p class="footer-logo">
+          El Jardín de Toribia
+        </p>
+
+        <p class="footer-tagline">
+          El jardin que nacio de un amor verdadero.
+        </p>
+
+
+        <!-- ======================= INSTAGRAM ======================= -->
+
+        <a
+          href="https://www.instagram.com/eljardindetoribia?stkn=ZzlmM3c5Ynd0c2E1"
+          class="instagram-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visítanos en Instagram"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+
+            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
+
+          </svg>
+
+          <span>
+            Instagram
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <nav
+        class="footer-nav"
+        aria-label="Enlaces del pie de página"
+      >
+
+        <a href="#inicio">
+          Inicio
+        </a>
+
+        <a href="#catalogo">
+          Catálogo
+        </a>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <p class="footer-copy">
+      © 2026 El Jardín de Toribia
+    </p>
+
+  </footer>
+
+
+  <!-- ======================= BOTÓN FLOTANTE WHATSAPP ======================= -->
+
+  <a
+    href="#"
+    class="whatsapp-float"
+    id="whatsapp-float-btn"
+    aria-label="Escribir por WhatsApp"
+    target="_blank"
+    rel="noopener"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      width="28"
+      height="28"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+
+      <path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.44 1.73 6.37L3.2 28.8l6.6-1.7a12.74 12.74 0 0 0 6.2 1.6h.005c7.07 0 12.8-5.73 12.8-12.8s-5.73-12.8-12.8-12.8Zm0 23.36h-.004a10.5 10.5 0 0 1-5.36-1.47l-.385-.23-3.92 1.01 1.05-3.82-.25-.393a10.53 10.53 0 0 1-1.615-5.66c0-5.83 4.75-10.58 10.59-10.58 2.83 0 5.49 1.1 7.49 3.1a10.52 10.52 0 0 1 3.1 7.49c0 5.83-4.75 10.55-10.7 10.55Zm5.79-7.9c-.317-.16-1.87-.92-2.16-1.03-.29-.1-.5-.16-.71.16-.21.32-.81 1.03-.995 1.24-.183.21-.366.24-.683.08-.317-.16-1.34-.49-2.55-1.57-.943-.84-1.58-1.88-1.765-2.2-.183-.32-.02-.49.14-.65.144-.14.317-.37.475-.55.16-.19.21-.32.317-.53.106-.21.053-.4-.026-.56-.08-.16-.71-1.71-.973-2.34-.257-.61-.518-.53-.71-.54h-.606c-.21 0-.552.08-.842.4-.29.32-1.106 1.08-1.106 2.63 0 1.55 1.132 3.05 1.29 3.26.158.21 2.23 3.4 5.4 4.77.755.325 1.343.52 1.803.665.757.24 1.446.207 1.99.126.607-.09 1.87-.765 2.135-1.505.263-.74.263-1.375.184-1.505-.08-.13-.29-.21-.606-.37Z"/>
+
+    </svg>
+
+  </a>
+
+
+  <!-- ======================= JAVASCRIPT ======================= -->
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
