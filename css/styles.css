@@ -328,6 +328,7 @@ button:focus-visible {
 .hero-overlay {
   position: absolute;
   inset: 0;
+
   background: linear-gradient(
     180deg,
     rgba(52, 73, 54, 0.15) 0%,
@@ -339,12 +340,19 @@ button:focus-visible {
 .hero-content {
   position: relative;
   z-index: 1;
+
   max-width: 620px;
+
   margin: 0 24px 64px;
+
   padding: 44px 40px;
+
   background-color: rgba(250, 248, 242, 0.94);
+
   backdrop-filter: blur(4px);
+
   border-radius: var(--radio);
+
   box-shadow: var(--sombra);
 }
 
@@ -396,7 +404,9 @@ button:focus-visible {
   gap: 32px;
 }
 
-/* Última fila: centrar las dos tarjetas (solo aplica con 3 columnas, escritorio) */
+
+/* Última fila: centrar las dos tarjetas */
+
 .producto-card:nth-child(7) {
   grid-column: 1 / 2;
   justify-self: end;
@@ -412,9 +422,13 @@ button:focus-visible {
 
 .producto-card {
   background-color: var(--blanco);
+
   border-radius: var(--radio);
+
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(52, 73, 54, 0.08);
+
+  box-shadow:
+    0 6px 18px rgba(52, 73, 54, 0.08);
 
   transition:
     transform var(--transicion),
@@ -458,6 +472,7 @@ button:focus-visible {
 
 .producto-carrusel > img {
   position: absolute;
+
   top: 0;
   left: 0;
 
@@ -497,6 +512,7 @@ button:focus-visible {
 
 .carrusel-indicadores {
   position: absolute;
+
   z-index: 10;
 
   left: 50%;
@@ -522,7 +538,8 @@ button:focus-visible {
 
   background-color: rgba(255, 255, 255, 0.65);
 
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.25);
 
   transition:
     background-color 0.3s ease,
@@ -540,8 +557,10 @@ button:focus-visible {
 
 .producto-info {
   padding: 24px;
+
   display: flex;
   flex-direction: column;
+
   flex-grow: 1;
 }
 
@@ -625,9 +644,13 @@ button:focus-visible {
 
 .paso-numero {
   display: inline-block;
+
   font-family: var(--fuente-titulos);
+
   font-size: 1.3rem;
+
   color: var(--verde-principal);
+
   border: 1px solid var(--verde-principal);
 
   width: 52px;
@@ -694,6 +717,7 @@ button:focus-visible {
   content: "";
 
   position: absolute;
+
   left: 0;
   top: 9px;
 
@@ -737,44 +761,60 @@ button:focus-visible {
 
 .site-footer {
   background-color: var(--verde-oscuro);
+
   padding-top: 40px;
-  border-top: 1px solid rgba(250, 248, 242, 0.12);
+
+  border-top:
+    1px solid rgba(250, 248, 242, 0.12);
 }
 
 .footer-inner {
   display: flex;
+
   flex-wrap: wrap;
+
   justify-content: space-between;
+
   align-items: center;
+
   gap: 20px;
+
   padding-bottom: 32px;
 }
 
 .footer-logo {
   font-family: var(--fuente-titulos);
+
   font-size: 1.25rem;
+
   color: var(--crema);
 }
 
 .footer-tagline {
   color: var(--verde-suave);
+
   font-size: 0.88rem;
+
   margin-top: 4px;
 }
 
 
 /* --------------------------------------------------------------------------
-   INSTAGRAM
+   INSTAGRAM Y TIKTOK
    -------------------------------------------------------------------------- */
 
-.instagram-link {
+.instagram-link,
+.tiktok-link {
   display: inline-flex;
+
   align-items: center;
+
   gap: 8px;
 
   margin-top: 12px;
 
   color: var(--verde-suave);
+
   font-size: 0.88rem;
 
   transition:
@@ -782,27 +822,52 @@ button:focus-visible {
     transform var(--transicion);
 }
 
-.instagram-link:hover {
+
+/* Efecto al pasar el cursor */
+
+.instagram-link:hover,
+.tiktok-link:hover {
   color: var(--crema);
+
   transform: translateY(-2px);
 }
 
-.instagram-link svg {
+
+/* Tamaño de los iconos */
+
+.instagram-link svg,
+.tiktok-link svg {
   width: 22px;
   height: 22px;
+
   flex-shrink: 0;
 }
 
 
+/* Separación entre Instagram y TikTok */
+
+.tiktok-link {
+  margin-top: 8px;
+}
+
+
+/* --------------------------------------------------------------------------
+   NAVEGACIÓN DEL FOOTER
+   -------------------------------------------------------------------------- */
+
 .footer-nav {
   display: flex;
+
   gap: 24px;
 }
 
 .footer-nav a {
   color: var(--verde-suave);
+
   font-size: 0.88rem;
-  transition: color var(--transicion);
+
+  transition:
+    color var(--transicion);
 }
 
 .footer-nav a:hover {
@@ -811,10 +876,15 @@ button:focus-visible {
 
 .footer-copy {
   text-align: center;
+
   color: rgba(250, 248, 242, 0.55);
+
   font-size: 0.8rem;
+
   padding: 18px 0;
-  border-top: 1px solid rgba(250, 248, 242, 0.1);
+
+  border-top:
+    1px solid rgba(250, 248, 242, 0.1);
 }
 
 
@@ -824,8 +894,10 @@ button:focus-visible {
 
 .whatsapp-float {
   position: fixed;
+
   right: 22px;
   bottom: 22px;
+
   z-index: 200;
 
   width: 58px;
@@ -834,13 +906,16 @@ button:focus-visible {
   border-radius: 50%;
 
   background-color: var(--whatsapp);
+
   color: var(--blanco);
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 10px 24px rgba(62, 107, 82, 0.4);
+  box-shadow:
+    0 10px 24px rgba(62, 107, 82, 0.4);
 
   transition:
     transform var(--transicion),
@@ -849,6 +924,7 @@ button:focus-visible {
 
 .whatsapp-float:hover {
   transform: scale(1.08);
+
   background-color: var(--whatsapp-hover);
 }
 
@@ -859,6 +935,7 @@ button:focus-visible {
 
 .reveal {
   opacity: 0;
+
   transform: translateY(16px);
 
   transition:
@@ -868,6 +945,7 @@ button:focus-visible {
 
 .reveal.visible {
   opacity: 1;
+
   transform: translateY(0);
 }
 
@@ -885,6 +963,7 @@ button:focus-visible {
 
   .nosotros-inner {
     grid-template-columns: 1fr;
+
     gap: 36px;
   }
 
@@ -894,14 +973,17 @@ button:focus-visible {
 
   .contacto-inner {
     grid-template-columns: 1fr;
+
     gap: 36px;
   }
 
   .pasos-lista {
     grid-template-columns: 1fr;
+
     gap: 32px;
 
     max-width: 420px;
+
     margin: 0 auto;
   }
 
@@ -910,12 +992,19 @@ button:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* En 2 columnas, las tarjetas 7 y 8 ya no deben forzarse a media columna:
-     se resetean para que ocupen su celda normal del grid. */
+
+  /*
+   * En 2 columnas, las tarjetas 7 y 8
+   * ya no deben forzarse a media columna.
+   */
+
   .producto-card:nth-child(7),
   .producto-card:nth-child(8) {
+
     grid-column: auto;
+
     justify-self: stretch;
+
     width: 100%;
   }
 
@@ -936,17 +1025,20 @@ button:focus-visible {
     position: fixed;
 
     top: 68px;
+
     left: 0;
     right: 0;
 
     flex-direction: column;
+
     align-items: stretch;
 
     gap: 0;
 
     background-color: var(--crema);
 
-    border-bottom: 1px solid rgba(95, 115, 88, 0.15);
+    border-bottom:
+      1px solid rgba(95, 115, 88, 0.15);
 
     padding: 8px 24px 24px;
 
@@ -962,19 +1054,27 @@ button:focus-visible {
   }
 
   .main-nav.abierto {
+
     transform: translateY(0);
+
     opacity: 1;
+
     pointer-events: auto;
   }
 
   .nav-list {
+
     flex-direction: column;
+
     gap: 4px;
+
     margin-bottom: 18px;
   }
 
   .nav-link {
+
     display: block;
+
     padding: 12px 0;
 
     border-bottom:
@@ -982,54 +1082,94 @@ button:focus-visible {
   }
 
   .nav-whatsapp {
+
     width: 100%;
+
     text-align: center;
   }
 
-  /* --- CORRECCIÓN: el hero ya no se estira a 82vh, solo ocupa lo que
-     necesita su contenido. Esto elimina el hueco vacío antes del catálogo. */
+
+  /*
+   * El hero ya no se estira a 82vh.
+   * Solo ocupa lo necesario para su contenido.
+   */
+
   .hero {
+
     min-height: auto;
+
     padding: 32px 0;
+
     align-items: flex-end;
   }
 
   .hero-content {
+
     margin: 0 16px 40px;
+
     padding: 32px 26px;
   }
 
   .hero-buttons .btn {
+
     width: 100%;
   }
 
   .section {
+
     padding: 64px 0;
   }
 
   .section-heading {
+
     margin-bottom: 40px;
   }
 
   .whatsapp-float {
+
     right: 16px;
+
     bottom: 16px;
 
     width: 52px;
     height: 52px;
   }
 
-  /* --- CORRECCIÓN: en celular el catálogo pasa a una sola columna,
-     para que el precio, la descripción y el botón no queden apretados. */
+
+  /*
+   * En celular el catálogo pasa a una sola columna.
+   */
+
   .catalogo-grid {
+
     grid-template-columns: 1fr;
   }
 
   .producto-card:nth-child(7),
   .producto-card:nth-child(8) {
+
     grid-column: auto;
+
     justify-self: stretch;
+
     width: 100%;
+  }
+
+
+  /*
+   * Footer en celular:
+   * Instagram y TikTok quedan uno debajo del otro.
+   */
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px 24px;
   }
 
 }
@@ -1042,10 +1182,12 @@ button:focus-visible {
 @media (max-width: 420px) {
 
   .header-inner {
+
     padding: 14px 18px;
   }
 
   .section-inner {
+
     padding: 0 18px;
   }
 
