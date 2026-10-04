@@ -17,8 +17,9 @@
 
 const CONFIG = {
   whatsapp: "525612051739",
-  horario: "Lunes a sábado, 9:00 AM - 6:00 PM",
-  zonaEntrega: "Ciudad de México y zonas cercanas"
+  horario: "Todos los dias de 9:00 AM - 10:30 PM",
+  zonaEntrega: "Ciudad de México y zonas cercanas",
+  mapsUrl: "https://www.google.com/maps/place/El+Jardín+de+Toribia/@19.3269314,-99.1358245,17z/data=!3m1!4b1!4m6!3m5!1s0x4185b85e680194a5:0x75fad713041b6176!8m2!3d19.3269314!4d-99.1332496!16s%2Fg%2F11z30_8171?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
 };
 
 const NUMERO_WHATSAPP = CONFIG.whatsapp;
@@ -742,6 +743,7 @@ function renderizarDatosContacto() {
       <strong>Zona de entrega:</strong>
       ${CONFIG.zonaEntrega}
     </li>
+    <li><a href="${CONFIG.mapsUrl}" target="_blank" rel="noopener">Ver ubicación en Google Maps</a></li>
   `;
 
 }
