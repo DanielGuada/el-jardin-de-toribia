@@ -45,7 +45,7 @@ const productos = [
   {
     nombre: "Rubor",
     descripcion: "Ramo floral disponible en dos tamaños, elaborado con una hermosa combinación de rosas, claveles y mini rosas.",
-    precio: "$450 - $700 MXN",
+    precio: "$600 - $740 MXN",
 
     imagenes: [
       "img/rubor-1.jpeg",
@@ -56,7 +56,7 @@ const productos = [
   {
     nombre: "Cariño",
     descripcion: "Arreglo floral con crisantemos y lirios en diferentes colores, complementado con delicados detalles de pintura que le dan un toque único y especial.",
-    precio: "$550 MXN",
+    precio: "$580 MXN",
 
     imagenes: [
       "img/cariño-1.jpeg"
@@ -65,7 +65,7 @@ const productos = [
   {
     nombre: "Gerberitas",
     descripcion: "Disponible en dos tamaños y diferentes colores, perfecto para regalar una sonrisa y llenar cualquier ocasión de alegría.",
-    precio: "$440 - $800 MXN",
+    precio: "$530 - $900 MXN",
 
     imagenes: [
       "img/gerberas-1.jpeg",
@@ -75,7 +75,7 @@ const productos = [
    {
     nombre: "Ramo Estrella",
     descripcion: "Una combinación de rosas, lirios, astromelias y margaritas, diseñada para llenar de color y alegría cualquier ocasión. Disponible en dos tamaños para elegir el detalle perfecto.",
-    precio: "$550 - $630 MXN",
+    precio: "$580 - $710 MXN",
 
     imagenes: [
       "img/estrella-1.jpeg",
@@ -85,7 +85,7 @@ const productos = [
   {
     nombre: "Bibble",
     descripcion: "Inspirado en el encanto de Bibble. Combina hortensias, claveles, margaritas y mini crisantemos.",
-    precio: "$590 MXN",
+    precio: "$610 MXN",
 
     imagenes: [
       "img/bibble-1.jpeg",
@@ -95,24 +95,13 @@ const productos = [
 
   
 
-  {
-    nombre: "Gatitos",
-    descripcion: "Un detalle lleno de ternura con 6 crisantemos personalizados con adorables gatitos. Perfecto para los amantes de los michis.",
-    precio: "$450 MXN",
-
-    imagenes: [
-      "img/personalizado-1.jpeg",
-      "img/personalizado-2.jpeg",
-      "img/personalizado-3.jpeg"
-    ]
-  },
  {
     nombre: "Especial-Personalizado",
     descripcion: "Una composición floral preparada especialmente para sorprender.",
     precio: "Cotizalo",
 
     imagenes: [
-      "img/especial-1.jpeg",
+      "img/regalo-1.jpeg",
       "img/regalo-2.jpeg",
     ]
   },
