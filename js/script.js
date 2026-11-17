@@ -78,8 +78,8 @@ const productos = [
     precio: "$580 - $710 MXN",
 
     imagenes: [
-      "img/estrella-1.jpeg",
-      "img/estrella-2.jpeg"
+      "img/estrella-2.jpeg",
+      "img/estrella-1.jpeg"
     ]
   },
   {
