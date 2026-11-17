@@ -33,7 +33,7 @@ const productos = [
   {
     nombre: "Ramo de Rosas",
     descripcion: "Disponible en diferentes colores y cantidades, ideal para cada ocasión.",
-    precio: "$380 - $1,100 MXN",
+    precio: "$400 - $1,200 MXN",
 
     imagenes: [
       "img/rosas-1.jpeg",
